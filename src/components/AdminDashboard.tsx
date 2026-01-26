@@ -18,9 +18,11 @@ import {
   Smartphone,
   Monitor,
   Clock,
-  Wifi
+  Wifi,
+  Ticket
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { VoucherManagement } from "./VoucherManagement";
 
 const MOCK_PACKAGES = [
   { id: 1, duration: "40 minutes", price: 5, active: true },
@@ -208,8 +210,9 @@ export function AdminDashboard() {
 
         {/* Main Content */}
         <Tabs defaultValue="packages" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2 lg:w-[400px]">
-            <TabsTrigger value="packages">Package Management</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 lg:w-[500px]">
+            <TabsTrigger value="packages">Packages</TabsTrigger>
+            <TabsTrigger value="vouchers">Vouchers</TabsTrigger>
             <TabsTrigger value="users">Active Users</TabsTrigger>
           </TabsList>
 
@@ -291,6 +294,10 @@ export function AdminDashboard() {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          <TabsContent value="vouchers" className="space-y-6">
+            <VoucherManagement />
           </TabsContent>
 
           <TabsContent value="users" className="space-y-6">

@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Wifi, Clock, Smartphone, CreditCard } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Wifi, Clock, Smartphone, CreditCard, Ticket } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { VoucherRedeem } from "./VoucherRedeem";
 
 const PACKAGES = [
   { id: 1, duration: "40 minutes", price: 5, popular: false },
@@ -69,24 +71,38 @@ export function HotspotPortal() {
           </div>
         </div>
 
-        {/* Phone Number Input */}
-        <Card className="neon-border">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-primary">
-              <Smartphone className="h-5 w-5" />
-              Enter Phone Number
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Input
-              type="tel"
-              placeholder="254712345678"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              className="neon-border bg-background/50"
-            />
-          </CardContent>
-        </Card>
+        {/* Payment Method Tabs */}
+        <Tabs defaultValue="mpesa" className="space-y-4">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="mpesa" className="flex items-center gap-2">
+              <CreditCard className="h-4 w-4" />
+              M-Pesa
+            </TabsTrigger>
+            <TabsTrigger value="voucher" className="flex items-center gap-2">
+              <Ticket className="h-4 w-4" />
+              Voucher
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="mpesa" className="space-y-4">
+            {/* Phone Number Input */}
+            <Card className="neon-border">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-primary">
+                  <Smartphone className="h-5 w-5" />
+                  Enter Phone Number
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Input
+                  type="tel"
+                  placeholder="254712345678"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="neon-border bg-background/50"
+                />
+              </CardContent>
+            </Card>
 
         {/* Package Selection */}
         <Card className="neon-border">
@@ -158,7 +174,12 @@ export function HotspotPortal() {
             </CardContent>
           </Card>
         )}
+          </TabsContent>
 
+          <TabsContent value="voucher">
+            <VoucherRedeem />
+          </TabsContent>
+        </Tabs>
         {/* Footer */}
         <div className="text-center text-xs text-muted-foreground">
           <p>Secure payments powered by Safaricom M-Pesa</p>
