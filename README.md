@@ -2,4 +2,4 @@
 
 with loveable AI. 
 
-For deployment reach me through my email : kiprotichsawe99@gmail.com
+For deployment reach me through my email :  Email <kiprotichsawe99@gmail.com>
