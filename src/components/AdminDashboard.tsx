@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { VoucherManagement } from "./VoucherManagement";
+import { ConnectedUsers } from "./ConnectedUsers";
 
 const MOCK_PACKAGES = [
   { id: 1, duration: "40 minutes", price: 5, active: true },
@@ -301,51 +302,7 @@ export function AdminDashboard() {
           </TabsContent>
 
           <TabsContent value="users" className="space-y-6">
-            <Card className="neon-border">
-              <CardHeader>
-                <CardTitle className="text-primary">Active Users</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Device</TableHead>
-                      <TableHead>IP Address</TableHead>
-                      <TableHead>Phone Number</TableHead>
-                      <TableHead>Package</TableHead>
-                      <TableHead>Time Remaining</TableHead>
-                      <TableHead>Status</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {activeUsers.map((user) => (
-                      <TableRow key={user.id}>
-                        <TableCell className="flex items-center gap-2">
-                          {user.deviceName.includes("iPhone") || user.deviceName.includes("Samsung") ? (
-                            <Smartphone className="h-4 w-4 text-primary" />
-                          ) : (
-                            <Monitor className="h-4 w-4 text-primary" />
-                          )}
-                          {user.deviceName}
-                        </TableCell>
-                        <TableCell className="font-mono text-sm">{user.ipAddress}</TableCell>
-                        <TableCell>{user.phoneNumber}</TableCell>
-                        <TableCell>{user.packageDuration}</TableCell>
-                        <TableCell className="flex items-center gap-2">
-                          <Clock className="h-4 w-4 text-warning" />
-                          {user.timeRemaining}
-                        </TableCell>
-                        <TableCell>
-                          <Badge variant="default" className="bg-success text-success-foreground">
-                            Active
-                          </Badge>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
+            <ConnectedUsers />
           </TabsContent>
         </Tabs>
 
