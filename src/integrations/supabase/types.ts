@@ -14,6 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
+      connected_users: {
+        Row: {
+          connected_at: string
+          created_at: string
+          device_name: string | null
+          device_type: string | null
+          expires_at: string
+          id: string
+          ip_address: string
+          package_duration: string
+          package_id: number
+          package_price: number
+          phone_number: string
+          status: string
+          voucher_code: string | null
+        }
+        Insert: {
+          connected_at?: string
+          created_at?: string
+          device_name?: string | null
+          device_type?: string | null
+          expires_at: string
+          id?: string
+          ip_address: string
+          package_duration: string
+          package_id: number
+          package_price: number
+          phone_number: string
+          status?: string
+          voucher_code?: string | null
+        }
+        Update: {
+          connected_at?: string
+          created_at?: string
+          device_name?: string | null
+          device_type?: string | null
+          expires_at?: string
+          id?: string
+          ip_address?: string
+          package_duration?: string
+          package_id?: number
+          package_price?: number
+          phone_number?: string
+          status?: string
+          voucher_code?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
