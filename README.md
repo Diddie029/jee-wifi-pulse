@@ -7,3 +7,5 @@ For deployment reach me through my email :  Email <kiprotichsawe99@gmail.com>
 CKECT OUT THE DEMO HERE : https://jee-wifi-pulse.lovable.app
 
 don't forget to leave any comments or commits 
+
+Database = Supabase 
