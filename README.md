@@ -1,11 +1,7 @@
- A Fully functional Wifi billing manangement system built enitirely with AI 
+ A Fully functional Wifi billing manangement system built just for you
 
-with loveable AI. 
+For deployment reach me through my email :  Email  ``kiprotichsawe99@gmail.com```
 
-For deployment reach me through my email :  Email <kiprotichsawe99@gmail.com>
-
-CKECT OUT THE DEMO HERE : https://jee-wifi-pulse.lovable.app
-
-don't forget to leave any comments or commits 
+don't forget to leave any comments 
 
 Database = Supabase 
