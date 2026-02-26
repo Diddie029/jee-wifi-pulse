@@ -7,3 +7,7 @@ Email  ``kiprotichsawe99@gmail.com``
 don't forget to leave any comments 
 
 Database = Supabase 
+
+MPESA Billing Fully intergrated
+
+Voucher management for admin 
