@@ -8,6 +8,6 @@ don't forget to leave any comments
 
 Database = Supabase 
 
-MPESA Billing and intergrated
+MPESA Billing payment intergrated
 
 Voucher management for admin 
