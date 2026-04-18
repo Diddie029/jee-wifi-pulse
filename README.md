@@ -1,7 +1,8 @@
  # JEE-Wi Fi-Pulse
- A Fully functional Wifi billing manangement system built just for you 
+#### A Fully functional Wifi billing manangement system built just for you 
 
  Are an ISP ?
+ Internet Service Provider
 
 For deployment reach me through my email :  
 
