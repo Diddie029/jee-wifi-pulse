@@ -8,7 +8,7 @@ For deployment reach me through my email :
 
 Email  ``kiprotichsawe99@gmail.com``
 
-don't forget to leave any comments 
+don't forget to leave any comments and views
 
 Database = Supabase 
 
