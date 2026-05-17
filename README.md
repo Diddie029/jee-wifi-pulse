@@ -14,4 +14,4 @@ Database = Supabase
 
 MPESA Billing payment intergrated
 
-Also Voucher integrated added so admin can generate vouchers for customers 
+Also Voucher integrated so admin can generate vouchers for customers 
