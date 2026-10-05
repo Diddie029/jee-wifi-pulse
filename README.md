@@ -3,6 +3,7 @@
 
  Are an ISP ?
  Internet Service Provider
+ Here's a fully functional Wifi- Hotspot billing system.
 
 For deployment reach me through my email :  
 
@@ -14,5 +15,4 @@ Database = Supabase
 
 MPESA Billing payment intergrated
 
-Also Voucher integrated so admin can generate vouchers for customers.
-🎉
+Also Voucher integrated so admin can generate vouchers for customers. 
